@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hindi Language Quiz</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            margin-bottom: 24px;
+            color: #00bfa5;
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .emoji {
+            font-size: 48px;
+            margin-top: 8px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 32px;
+        }
+
+        .options button {
+            margin-bottom: 16px;
+            padding: 12px 32px;
+            background-color: #00bfa5;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .options button:hover {
+            background-color: #027c6b;
+        }
+
+        .score {
+            font-weight: bold;
+            margin-top: 32px;
+            text-align: center;
+            animation: slideIn 0.5s ease;
+        }
+
+        .character {
+            width: 200px;
+            height: 200px;
+            background-image: url('character.png'); /* Replace with your character image */
+            background-size: cover;
+            margin-left: 24px;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .intro-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #00bfa5, rgb(0, 175, 152));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+          }
+          
+          .logo {
+            max-width: 200px;
+            max-height: 200px;
+          }
+          
+          .intro-section.hide {
+            opacity: 0;
+            pointer-events: none;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="intro-section">
+        <img src="your-logo.png" alt="Logo" class="logo">
+      </div>
+      <Script>
+        // Function to hide the intro section after a certain duration
+    function hideIntroSection() {
+      const introSection = document.querySelector('.intro-section');
+      introSection.classList.add('hide');
+    }
+    
+    // Hide the intro section after 5 seconds (5000 milliseconds)
+    setTimeout(hideIntroSection, 5000);
+    
+      </Script>
+    <div class="container">
+        <h1>Hindi Language Quiz</h1>
+        <div class="question">
+            <p id="questionText">What is the Hindi word for "Hello"?</p>
+            <p class="emoji">&#x1F590;</p>
+        </div>
+        <div class="options">
+            <button onclick="checkAnswer('a')">नमस्ते (Namaste)</button>
+            <button onclick="checkAnswer('b')">आपका स्वागत है (Aapka swagat hai)</button>
+            <button onclick="checkAnswer('c')">शुभ प्रभात (Shubh prabhat)</button>
+            <button onclick="checkAnswer('d')">हाय (Hay)</button>
+        </div>
+        <p id="scoreText" class="score"></p>
+    </div>
+
+    <div class="character"></div>
+
+    <script>
+        const levels = [
+            {
+                level: 1,
+                questions: [
+                    {
+                        question: "What is the Hindi word for 'Hello'?",
+                        emoji: "&#x1F590;",
+                        options: {
+                            a: "नमस्ते (Namaste)",
+                            b: "आपका स्वागत है (Aapka swagat hai)",
+                            c: "शुभ प्रभात (Shubh prabhat)",
+                            d: "हाय (Hay)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What does 'धन्यवाद' (Dhanyavaad) mean in Hindi?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "Goodbye",
+                            b: "Thank you",
+                            c: "Sorry",
+                            d: "How are you"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Yes'?",
+                        emoji: "&#x2705;",
+                        options: {
+                            a: "नहीं (Nahin)",
+                            b: "जी हां (Ji haan)",
+                            c: "बहुत अच्छा (Bahut accha)",
+                            d: "हां (Haan)"
+                        },
+                        answer: "d"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Goodbye'?",
+                        emoji: "&#x1F44B;",
+                        options: {
+                            a: "नमस्ते (Namaste)",
+                            b: "आलविदा (Alvida)",
+                            c: "धन्यवाद (Dhanyavaad)",
+                            d: "आपका स्वागत है (Aapka swagat hai)"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What does 'माफ़ कीजिए' (Maaf kijiye) mean in Hindi?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "Sorry",
+                            b: "Thank you",
+                            c: "Goodbye",
+                            d: "How are you"
+                        },
+                        answer: "a"
+                    }
+                ]
+            },
+            {
+                level: 2,
+                questions: [
+                    {
+                        question: "What is the Hindi word for 'I love you'?",
+                        emoji: "&#x2764;&#xFE0F;",
+                        options: {
+                            a: "मुझे तुमसे प्यार है (Mujhe tumse pyar hai)",
+                            b: "मैं आपको प्यार करता हूँ (Main aapko pyar karta hoon)",
+                            c: "तुम मेरे लिए क्या कर सकते हो? (Tum mere liye kya kar sakte ho?)",
+                            d: "मैं अच्छा हूं (Main accha hoon)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What does 'खाना' (Khana) mean in Hindi?",
+                        emoji: "&#x1F374;",
+                        options: {
+                            a: "Drink",
+                            b: "Sleep",
+                            c: "Food",
+                            d: "Walk"
+                        },
+                        answer: "c"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Thank you'?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "कृपया (Kripya)",
+                            b: "आपका स्वागत है (Aapka swagat hai)",
+                            c: "नमस्ते (Namaste)",
+                            d: "धन्यवाद (Dhanyavaad)"
+                        },
+                        answer: "d"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Good morning'?",
+                        emoji: "&#x1F305;",
+                        options: {
+                            a: "शुभ सवेर (Shubh saver)",
+                            b: "सुप्रभात (Suprabhat)",
+                            c: "नमस्ते (Namaste)",
+                            d: "बधाई हो (Badhai ho)"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What does 'कृपया' (Kripya) mean in Hindi?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "Please",
+                            b: "Hello",
+                            c: "Thank you",
+                            d: "Sorry"
+                        },
+                        answer: "a"
+                    }
+                ]
+            },
+            {
+                level: 3,
+                questions: [
+                    {
+                        question: "What is the Hindi word for 'How are you'?",
+                        emoji: "&#x1F64B;",
+                        options: {
+                            a: "आप कैसे हैं (Aap kaise hain)",
+                            b: "मैं ठीक हूँ (Main theek hoon)",
+                            c: "मेरा नाम क्या है (Mera naam kya hai)",
+                            d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What does 'शुभ रात्रि' (Shubh ratri) mean in Hindi?",
+                        emoji: "&#x1F31B;",
+                        options: {
+                            a: "Good morning",
+                            b: "Good evening",
+                            c: "Good night",
+                            d: "Goodbye"
+                        },
+                        answer: "c"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Water'?",
+                        emoji: "&#x1F30A;",
+                        options: {
+                            a: "पानी (Paani)",
+                            b: "आग (Aag)",
+                            c: "बारिश (Barish)",
+                            d: "खाना (Khana)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What is the Hindi word for 'My name is'?",
+                        emoji: "&#x1F4AC;",
+                        options: {
+                            a: "तुम्हारा नाम क्या है (Tumhara naam kya hai)",
+                            b: "मेरा नाम है (Mera naam hai)",
+                            c: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)",
+                            d: "मैं ठीक हूँ (Main theek hoon)"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What does 'बहुत धन्यवाद' (Bahut dhanyavaad) mean in Hindi?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "Very good",
+                            b: "Thank you very much",
+                            c: "Excuse me",
+                            d: "I don't understand"
+                        },
+                        answer: "b"
+                    }
+                ]
+            },
+            {
+                level: 4,
+                questions: [
+                    {
+                        question: "What is the Hindi word for 'Today'?",
+                        emoji: "&#x1F4C5;",
+                        options: {
+                            a: "आज (Aaj)",
+                            b: "कल (Kal)",
+                            c: "परसो (Parso)",
+                            d: "बुधवार (Budhwar)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What does 'सब्ज़ी' (Sabzi) mean in Hindi?",
+                        emoji: "&#x1F331;",
+                        options: {
+                            a: "Fruit",
+                            b: "Vegetable",
+                            c: "Rice",
+                            d: "Meat"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Thank you very much'?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "बहुत धन्यवाद (Bahut dhanyavaad)",
+                            b: "कृपया (Kripya)",
+                            c: "नमस्ते (Namaste)",
+                            d: "माफ़ कीजिए (Maaf kijiye)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Good evening'?",
+                        emoji: "&#x1F307;",
+                        options: {
+                            a: "शुभ संध्या (Shubh sandhya)",
+                            b: "सुप्रभात (Suprabhat)",
+                            c: "नमस्ते (Namaste)",
+                            d: "बधाई हो (Badhai ho)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What does 'माफ़ी चाहता हूँ' (Maafi chahta hoon) mean in Hindi?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "I'm sorry",
+                            b: "Thank you",
+                            c: "Goodbye",
+                            d: "I love you"
+                        },
+                        answer: "a"
+                    }
+                ]
+            },
+            {
+                level: 5,
+                questions: [
+                    {
+                        question: "What is the Hindi word for 'Where is the bathroom'?",
+                        emoji: "&#x1F6BD;",
+                        options: {
+                            a: "कमरा कहाँ है (Kamra kahan hai)",
+                            b: "बाथरूम कहाँ है (Bathroom kahan hai)",
+                            c: "खाना कहाँ मिलेगा (Khana kahan milega)",
+                            d: "मैं ठीक हूँ (Main theek hoon)"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What does 'बहुत ख़ूबसूरत' (Bahut khoobsurat) mean in Hindi?",
+                        emoji: "&#x1F60D;",
+                        options: {
+                            a: "Good morning",
+                            b: "Beautiful",
+                            c: "Good night",
+                            d: "Goodbye"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Friend'?",
+                        emoji: "&#x1F465;",
+                        options: {
+                            a: "मित्र (Mitr)",
+                            b: "दोस्त (Dost)",
+                            c: "सहेली (Saheli)",
+                            d: "प्रेमी (Premi)"
+                        },
+                        answer: "b"
+                    },
+                    {
+                        question: "What is the Hindi word for 'Good afternoon'?",
+                        emoji: "&#x1F31E;",
+                        options: {
+                            a: "शुभ दोपहर (Shubh dopahar)",
+                            b: "सुप्रभात (Suprabhat)",
+                            c: "नमस्ते (Namaste)",
+                            d: "बधाई हो (Badhai ho)"
+                        },
+                        answer: "a"
+                    },
+                    {
+                        question: "What does 'मुझे समझ नहीं आ रहा है' (Mujhe samajh nahi aa raha hai) mean in Hindi?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "I understand",
+                            b: "Thank you",
+                            c: "I don't understand",
+                            d: "Excuse me"
+                        },
+                        answer: "c"
+                    }
+                ]
+            }
+        ];
+
+        let currentLevelIndex = 0;
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function displayQuestion() {
+            const currentLevel = levels[currentLevelIndex];
+            const currentQuestion = currentLevel.questions[currentQuestionIndex];
+
+            const questionText = document.getElementById("questionText");
+            questionText.innerHTML = currentQuestion.question;
+
+            const emoji = document.querySelector(".emoji");
+            emoji.innerHTML = currentQuestion.emoji;
+
+            const optionsContainer = document.querySelector(".options");
+            optionsContainer.innerHTML = "";
+
+            for (const option in currentQuestion.options) {
+                const button = document.createElement("button");
+                button.textContent = currentQuestion.options[option];
+                button.setAttribute("onclick", `checkAnswer('${option}')`);
+                optionsContainer.appendChild(button);
+            }
+        }
+
+        function checkAnswer(selectedOption) {
+            const currentLevel = levels[currentLevelIndex];
+            const currentQuestion = currentLevel.questions[currentQuestionIndex];
+
+            if (selectedOption === currentQuestion.answer) {
+                score++;
+            }
+
+            if (currentQuestionIndex < currentLevel.questions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion();
+            } else {
+                if (currentLevelIndex < levels.length - 1) {
+                    const continueLearning = confirm("Congratulations! You completed Level " + currentLevel.level + ". Do you want to continue learning Hindi?");
+                    if (continueLearning) {
+                        currentQuestionIndex = 0;
+                        currentLevelIndex++;
+                        displayQuestion();
+                    } else {
+                        showScore();
+                    }
+                } else {
+                    showScore();
+                }
+            }
+        }
+
+        function showScore() {
+            const container = document.querySelector(".container");
+            const scoreText = document.getElementById("scoreText");
+            scoreText.textContent = "Quiz Completed!\nYour score: " + score + " out of " + getTotalQuestionsCount();
+            scoreText.style.display = "block";
+        }
+
+        function getTotalQuestionsCount() {
+            let totalQuestionsCount = 0;
+            for (const level of levels) {
+                totalQuestionsCount += level.questions.length;
+            }
+            return totalQuestionsCount;
+        }
+
+        displayQuestion();
+    </script>
+</body>
+
+</html>
