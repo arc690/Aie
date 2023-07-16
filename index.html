@@ -161,275 +161,368 @@
 
     <script>
         const levels = [
-            {
-                level: 1,
-                questions: [
-                    {
-                        question: "What is the Hindi word for 'Hello'?",
-                        emoji: "&#x1F590;",
-                        options: {
-                            a: "नमस्ते (Namaste)",
-                            b: "आपका स्वागत है (Aapka swagat hai)",
-                            c: "शुभ प्रभात (Shubh prabhat)",
-                            d: "हाय (Hay)"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi word 'नमस्ते' (Namaste) is used to say 'Hello' or 'Greetings' in English."
+        {
+            level: 1,
+            questions: [
+                {
+                    question: "What is the Hindi word for 'Hello'?",
+                    emoji: "&#x1F590;",
+                    options: {
+                        a: "नमस्ते (Namaste)",
+                        b: "आपका स्वागत है (Aapka swagat hai)",
+                        c: "शुभ प्रभात (Shubh prabhat)",
+                        d: "हाय (Hay)"
                     },
-                    {
-                        question: "What does 'धन्यवाद' (Dhanyavaad) mean in Hindi?",
-                        emoji: "&#x1F64F;",
-                        options: {
-                            a: "Goodbye",
-                            b: "Thank you",
-                            c: "Sorry",
-                            d: "How are you"
-                        },
-                        answer: "b",
-                        explanation: "The Hindi word 'धन्यवाद' (Dhanyavaad) translates to 'Thank you' in English."
+                    answer: "a",
+                    explanation: "The Hindi word 'नमस्ते' (Namaste) is used to say 'Hello' or 'Greetings' in English."
+                },
+                {
+                    question: "What does 'धन्यवाद' (Dhanyavaad) mean in Hindi?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "Goodbye",
+                        b: "Thank you",
+                        c: "Sorry",
+                        d: "How are you"
                     },
-                    {
-                        question: "What is the Hindi word for 'Yes'?",
-                        emoji: "&#x2705;",
-                        options: {
-                            a: "नहीं (Nahin)",
-                            b: "जी हां (Ji haan)",
-                            c: "बहुत अच्छा (Bahut accha)",
-                            d: "हां (Haan)"
-                        },
-                        answer: "d",
-                        explanation: "The Hindi word 'हां' (Haan) means 'Yes' in English."
+                    answer: "b",
+                    explanation: "The Hindi word 'धन्यवाद' (Dhanyavaad) translates to 'Thank you' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'Yes'?",
+                    emoji: "&#x2705;",
+                    options: {
+                        a: "नहीं (Nahin)",
+                        b: "जी हां (Ji haan)",
+                        c: "बहुत अच्छा (Bahut accha)",
+                        d: "हां (Haan)"
                     },
-                    {
-                        question: "What is the Hindi word for 'Goodbye'?",
-                        emoji: "&#x1F44B;",
-                        options: {
-                            a: "नमस्ते (Namaste)",
-                            b: "आलविदा (Alvida)",
-                            c: "धन्यवाद (Dhanyavaad)",
-                            d: "आपका स्वागत है (Aapka swagat hai)"
-                        },
-                        answer: "b",
-                        explanation: "The Hindi word 'आलविदा' (Alvida) is used to say 'Goodbye' in English."
+                    answer: "d",
+                    explanation: "The Hindi word 'हां' (Haan) means 'Yes' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'Goodbye'?",
+                    emoji: "&#x1F44B;",
+                    options: {
+                        a: "नमस्ते (Namaste)",
+                        b: "आलविदा (Alvida)",
+                        c: "धन्यवाद (Dhanyavaad)",
+                        d: "आपका स्वागत है (Aapka swagat hai)"
                     },
-                    {
-                        question: "What does 'माफ़ कीजिए' (Maaf kijiye) mean in Hindi?",
-                        emoji: "&#x1F64F;",
-                        options: {
-                            a: "Sorry",
-                            b: "Thank you",
-                            c: "Goodbye",
-                            d: "How are you"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi phrase 'माफ़ कीजिए' (Maaf kijiye) translates to 'Sorry' in English."
+                    answer: "b",
+                    explanation: "The Hindi word 'आलविदा' (Alvida) is used to say 'Goodbye' in English."
+                },
+                {
+                    question: "What does 'माफ़ कीजिए' (Maaf kijiye) mean in Hindi?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "Sorry",
+                        b: "Thank you",
+                        c: "Goodbye",
+                        d: "How are you"
                     },
-                    {
-                        question: "What is the Hindi word for 'Water'?",
-                        emoji: "&#x1F30A;",
-                        options: {
-                            a: "पानी (Paani)",
-                            b: "आग (Aag)",
-                            c: "बारिश (Barish)",
-                            d: "खाना (Khana)"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi word 'पानी' (Paani) means 'Water' in English."
+                    answer: "a",
+                    explanation: "The Hindi phrase 'माफ़ कीजिए' (Maaf kijiye) translates to 'Sorry' in English."
                     },
-                    {
-                        question: "What is the Hindi word for 'My name is'?",
-                        emoji: "&#x1F4AC;",
-                        options: {
-                            a: "तुम्हारा नाम क्या है (Tumhara naam kya hai)",
-                            b: "मेरा नाम है (Mera naam hai)",
-                            c: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)",
-                            d: "मैं ठीक हूँ (Main theek hoon)"
-                        },
-                        answer: "b",
-                        explanation: "The Hindi phrase 'मेरा नाम है' (Mera naam hai) is used to say 'My name is' in English."
+                {
+                    question: "What is the Hindi word for 'Water'?",
+                    emoji: "&#x1F30A;",
+                    options: {
+                        a: "पानी (Paani)",
+                        b: "आग (Aag)",
+                        c: "बारिश (Barish)",
+                        d: "खाना (Khana)"
                     },
-                    {
-                        question: "What does 'बहुत धन्यवाद' (Bahut dhanyavaad) mean in Hindi?",
-                        emoji: "&#x1F64F;",
-                        options: {
-                            a: "Very good",
-                            b: "Thank you very much",
-                            c: "Excuse me",
-                            d: "I don't understand"
-                        },
-                        answer: "b",
-                        explanation: "The Hindi phrase 'बहुत धन्यवाद' (Bahut dhanyavaad) means 'Thank you very much' in English."
+                    answer: "a",
+                    explanation: "The Hindi word 'पानी' (Paani) means 'Water' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'My name is'?",
+                    emoji: "&#x1F4AC;",
+                    options: {
+                        a: "तुम्हारा नाम क्या है (Tumhara naam kya hai)",
+                        b: "मेरा नाम है (Mera naam hai)",
+                        c: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)",
+                        d: "मैं ठीक हूँ (Main theek hoon)"
+                    },
+                    answer: "b",
+                    explanation: "The Hindi phrase 'मेरा नाम है' (Mera naam hai) is used to say 'My name is' in English."
+                },
+                {
+                    question: "What does 'बहुत धन्यवाद' (Bahut dhanyavaad) mean in Hindi?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "Very good",
+                        b: "Thank you very much",
+                        c: "Excuse me",
+                        d: "I don't understand"
+                    },
+                    answer: "b",
+                    explanation: "The Hindi phrase 'बहुत धन्यवाद' (Bahut dhanyavaad) means 'Thank you very much' in English."
                     }
-                ]
-            },
-            {
-                level: 2,
-                questions: [
-                    {
-                        question: "What is the Hindi word for 'I love you'?",
-                        emoji: "&#x2764;&#xFE0F;",
-                        options: {
-                            a: "मुझे तुमसे प्यार है (Mujhe tumse pyar hai)",
-                            b: "मैं आपको प्यार करता हूँ (Main aapko pyar karta hoon)",
-                            c: "तुम मेरे लिए क्या कर सकते हो? (Tum mere liye kya kar sakte ho?)",
-                            d: "मैं अच्छा हूं (Main accha hoon)"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi phrase 'मुझे तुमसे प्यार है' (Mujhe tumse pyar hai) means 'I love you' in English."
+            ]
+        },
+        {
+            level: 2,
+            questions: [
+                {
+                    question: "What is the Hindi word for 'I love you'?",
+                    emoji: "&#x2764;&#xFE0F;",
+                    options: {
+                        a: "मुझे तुमसे प्यार है (Mujhe tumse pyar hai)",
+                        b: "मैं आपको प्यार करता हूँ (Main aapko pyar karta hoon)",
+                        c: "तुम मेरे लिए क्या कर सकते हो? (Tum mere liye kya kar sakte ho?)",
+                        d: "मैं अच्छा हूं (Main accha hoon)"
                     },
-                    {
-                        question: "What does 'खाना' (Khana) mean in Hindi?",
-                        emoji: "&#x1F374;",
-                        options: {
-                            a: "Drink",
-                            b: "Sleep",
-                            c: "Food",
-                            d: "Walk"
-                        },
-                        answer: "c",
-                        explanation: "The Hindi word 'खाना' (Khana) translates to 'Food' in English."
+                    answer: "a",
+                    explanation: "The Hindi phrase 'मुझे तुमसे प्यार है' (Mujhe tumse pyar hai) means 'I love you' in English."
+                },
+                {
+                    question: "What does 'खाना' (Khana) mean in Hindi?",
+                    emoji: "&#x1F374;",
+                    options: {
+                        a: "Drink",
+                        b: "Sleep",
+                        c: "Food",
+                        d: "Walk"
                     },
-                    {
-                        question: "What is the Hindi word for 'Thank you'?",
-                        emoji: "&#x1F64F;",
-                        options: {
-                            a: "कृपया (Kripya)",
-                            b: "आपका स्वागत है (Aapka swagat hai)",
-                            c: "नमस्ते (Namaste)",
-                            d: "धन्यवाद (Dhanyavaad)"
-                        },
-                        answer: "d",
-                        explanation: "The Hindi phrase 'धन्यवाद' (Dhanyavaad) is used to say 'Thank you' in English."
+                    answer: "c",
+                    explanation: "The Hindi word 'खाना' (Khana) translates to 'Food' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'Thank you'?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "कृपया (Kripya)",
+                        b: "आपका स्वागत है (Aapka swagat hai)",
+                        c: "नमस्ते (Namaste)",
+                        d: "धन्यवाद (Dhanyavaad)"
                     },
-                    {
-                        question: "What is the Hindi word for 'Good morning'?",
-                        emoji: "&#x1F305;",
-                        options: {
-                            a: "शुभ सवेर (Shubh saver)",
-                            b: "सुप्रभात (Suprabhat)",
-                            c: "नमस्ते (Namaste)",
-                            d: "बधाई हो (Badhai ho)"
-                        },
-                        answer: "b",
-                        explanation: "The Hindi phrase 'सुप्रभात' (Suprabhat) is used to greet 'Good morning' in English."
+                    answer: "d",
+                    explanation: "The Hindi phrase 'धन्यवाद' (Dhanyavaad) is used to say 'Thank you' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'Good morning'?",
+                    emoji: "&#x1F305;",
+                    options: {
+                        a: "शुभ सवेर (Shubh saver)",
+                        b: "सुप्रभात (Suprabhat)",
+                        c: "नमस्ते (Namaste)",
+                        d: "बधाई हो (Badhai ho)"
                     },
-                    {
-                        question: "What does 'कृपया' (Kripya) mean in Hindi?",
-                        emoji: "&#x1F64F;",
-                        options: {
-                            a: "Please",
-                            b: "Hello",
-                            c: "Thank you",
-                            d: "Sorry"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi word 'कृपया' (Kripya) translates to 'Please' in English."
-                    }
-                ]
-            },
-            {
-                level: 3,
-                questions: [
-                    {
-                        question: "What is the Hindi word for 'How are you'?",
-                        emoji: "&#x1F64B;",
-                        options: {
-                            a: "आप कैसे हैं (Aap kaise hain)",
-                            b: "मैं ठीक हूँ (Main theek hoon)",
-                            c: "मेरा नाम क्या है (Mera naam kya hai)",
-                            d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi phrase 'आप कैसे हैं' (Aap kaise hain) is used to ask 'How are you?' in English."
+                    answer: "b",
+                    explanation: "The Hindi phrase 'सुप्रभात' (Suprabhat) is used to greet 'Good morning' in English."
+                },
+                {
+                    question: "What does 'कृपया' (Kripya) mean in Hindi?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "Please",
+                        b: "Hello",
+                        c: "Thank you",
+                        d: "Sorry"
                     },
-                    {
-                        question: "What does 'बहुत अच्छा' (Bahut accha) mean in Hindi?",
-                        emoji: "&#x1F44D;",
-                        options: {
-                            a: "Very good",
-                            b: "Thank you",
-                            c: "Excuse me",
-                            d: "I don't understand"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi phrase 'बहुत अच्छा' (Bahut accha) means 'Very good' in English."
+                    answer: "a",
+                    explanation: "The Hindi word 'कृपया' (Kripya) translates to 'Please' in English."
+                }
+            ]
+        },
+        {
+            level: 3,
+            questions: [
+                {
+                    question: "What is the Hindi word for 'How are you'?",
+                    emoji: "&#x1F64B;",
+                    options: {
+                        a: "आप कैसे हैं (Aap kaise hain)",
+                        b: "मैं ठीक हूँ (Main theek hoon)",
+                        c: "मेरा नाम क्या है (Mera naam kya hai)",
+                        d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
                     },
-                    {
-                        question: "What is the Hindi word for 'Sorry'?",
-                        emoji: "&#x1F64F;",
-                        options: {
-                            a: "कृपया (Kripya)",
-                            b: "आपका स्वागत है (Aapka swagat hai)",
-                            c: "नमस्ते (Namaste)",
-                            d: "माफ़ कीजिए (Maaf kijiye)"
-                        },
-                        answer: "d",
-                        explanation: "The Hindi word 'माफ़ कीजिए' (Maaf kijiye) is used to say 'Sorry' in English."
+                    answer: "a",
+                    explanation: "The Hindi phrase 'आप कैसे हैं' (Aap kaise hain) is used to ask 'How are you?' in English."
+                },
+                {
+                    question: "What does 'आपसे मिलकर ख़ुशी हुई' (Aapse milkar khushi hui) mean in Hindi?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "How are you?",
+                        b: "Nice to meet you",
+                        c: "What is your name?",
+                        d: "I'm sorry"
                     },
-                    {
-                        question: "What is the Hindi word for 'No'?",
-                        emoji: "&#x274C;",
-                        options: {
-                            a: "हां (Haan)",
-                            b: "नहीं (Nahin)",
-                            c: "आपका स्वागत है (Aapka swagat hai)",
-                            d: "बहुत अच्छा (Bahut accha)"
-                        },
-                        answer: "b",
-                        explanation: "The Hindi word 'नहीं' (Nahin) means 'No' in English."
+                    answer: "b",
+                    explanation: "The Hindi phrase 'आपसे मिलकर ख़ुशी हुई' (Aapse milkar khushi hui) translates to 'Nice to meet you' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'Sorry'?",
+                    emoji: "&#x1F64B;",
+                    options: {
+                        a: "कृपया (Kripya)",
+                        b: "सौभाग्य (Saubhagya)",
+                        c: "माफ़ कीजिए (Maaf kijiye)",
+                        d: "आपका स्वागत है (Aapka swagat hai)"
                     },
-                    {
-                        question: "What does 'मेरा नाम है' (Mera naam hai) mean in Hindi?",
-                        emoji: "&#x1F4AC;",
-                        options: {
-                            a: "What is your name?",
-                            b: "My name is",
-                            c: "Nice to meet you",
-                            d: "I am fine"
-                        },
-                        answer: "b",
-                        explanation: "The Hindi phrase 'मेरा नाम है' (Mera naam hai) is used to say 'My name is' in English."
+                    answer: "c",
+                    explanation: "The Hindi word 'माफ़ कीजिए' (Maaf kijiye) means 'Sorry' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'No'?",
+                    emoji: "&#x274C;",
+                    options: {
+                        a: "हां (Haan)",
+                        b: "नहीं (Nahin)",
+                        c: "आपका स्वागत है (Aapka swagat hai)",
+                        d: "बहुत अच्छा (Bahut accha)"
                     },
-                    {
-                        question: "What is the Hindi word for 'How old are you'?",
-                        emoji: "&#x1F64B;",
-                        options: {
-                            a: "तुम्हारी उम्र क्या है (Tumhari umr kya hai)",
-                            b: "मैं ठीक हूँ (Main theek hoon)",
-                            c: "मेरा नाम क्या है (Mera naam kya hai)",
-                            d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi phrase 'तुम्हारी उम्र क्या है' (Tumhari umr kya hai) is used to ask 'How old are you?' in English."
+                    answer: "b",
+                    explanation: "The Hindi word 'नहीं' (Nahin) means 'No' in English."
+                },
+                {
+                    question: "What does 'मेरा नाम है' (Mera naam hai) mean in Hindi?",
+                    emoji: "&#x1F4AC;",
+                    options: {
+                        a: "What is your name?",
+                        b: "My name is",
+                        c: "Nice to meet you",
+                        d: "I am fine"
                     },
-                    {
-                        question: "What is the Hindi word for 'Where is the bathroom'?",
-                        emoji: "&#x1F6BD;",
-                        options: {
-                            a: "बाथरूम कहाँ है (Bathroom kahan hai)",
-                            b: "मैं ठीक हूँ (Main theek hoon)",
-                            c: "मेरा नाम क्या है (Mera naam kya hai)",
-                            d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
-                        },
-                        answer: "a",
-                        explanation: "The Hindi phrase 'बाथरूम कहाँ है' (Bathroom kahan hai) is used to ask 'Where is the bathroom?' in English."
+                    answer: "b",
+                    explanation: "The Hindi phrase 'मेरा नाम है' (Mera naam hai) is used to say 'My name is' in English."
+                }
+            ]
+        },
+        {
+            level: 4,
+            questions: [
+                {
+                    question: "What is the Hindi word for 'Where are you from'?",
+                    emoji: "&#x1F64B;",
+                    options: {
+                        a: "तुम कहाँ से हो (Tum kahan se ho)",
+                        b: "मैं ठीक हूँ (Main theek hoon)",
+                        c: "मेरा नाम क्या है (Mera naam kya hai)",
+                        d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
                     },
-                    {
-                        question: "What does 'धन्य होना' (Dhany hona) mean in Hindi?",
-                        emoji: "&#x1F64F;",
-                        options: {
-                            a: "Thank you",
-                            b: "Excuse me",
-                            c: "Goodbye",
-                            d: "Congratulations"
-                        },
-                        answer: "d",
-                        explanation: "The Hindi phrase 'धन्य होना' (Dhany hona) translates to 'Congratulations' in English."
-                    }
-                ]
-            }
-        ];
-
+                    answer: "a",
+                    explanation: "The Hindi phrase 'तुम कहाँ से हो' (Tum kahan se ho) is used to ask 'Where are you from?' in English."
+                },
+                {
+                    question: "What does 'बहुत अच्छा' (Bahut accha) mean in Hindi?",
+                    emoji: "&#x1F44D;",
+                    options: {
+                        a: "Very good",
+                        b: "Thank you",
+                        c: "Excuse me",
+                        d: "I don't understand"
+                    },
+                    answer: "a",
+                    explanation: "The Hindi phrase 'बहुत अच्छा' (Bahut accha) means 'Very good' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'Excuse me'?",
+                    emoji: "&#x1F64B;",
+                    options: {
+                        a: "कृपया (Kripya)",
+                        b: "माफ़ कीजिए (Maaf kijiye)",
+                        c: "आपका स्वागत है (Aapka swagat hai)",
+                        d: "माफ़ करना (Maaf karna)"
+                    },
+                    answer: "b",
+                    explanation: "The Hindi phrase 'माफ़ कीजिए' (Maaf kijiye) is used to say 'Excuse me' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'I don't understand'?",
+                    emoji: "&#x1F914;",
+                    options: {
+                        a: "मैं समझ नहीं पाता हूँ (Main samajh nahi pata hoon)",
+                        b: "क्या (Kya)",
+                        c: "हाँ (Haan)",
+                        d: "शुक्रिया (Shukriya)"
+                    },
+                    answer: "a",
+                    explanation: "The Hindi phrase 'मैं समझ नहीं पाता हूँ' (Main samajh nahi pata hoon) means 'I don't understand' in English."
+                },
+                {
+                    question: "What does 'क्या हाल है' (Kya haal hai) mean in Hindi?",
+                    emoji: "&#x1F64B;",
+                    options: {
+                        a: "How are you?",
+                        b: "Nice to meet you",
+                        c: "What is your name?",
+                        d: "I'm sorry"
+                    },
+                    answer: "a",
+                    explanation: "The Hindi phrase 'क्या हाल है' (Kya haal hai) is used to ask 'How are you?' in English."
+                }
+            ]
+        },
+        {
+            level: 5,
+            questions: [
+                {
+                    question: "What is the Hindi word for 'What is your name'?",
+                    emoji: "&#x1F64B;",
+                    options: {
+                        a: "तुम्हारा नाम क्या है (Tumhara naam kya hai)",
+                        b: "मैं ठीक हूँ (Main theek hoon)",
+                        c: "आपका स्वागत है (Aapka swagat hai)",
+                        d: "माफ़ कीजिए (Maaf kijiye)"
+                    },
+                    answer: "a",
+                    explanation: "The Hindi phrase 'तुम्हारा नाम क्या है' (Tumhara naam kya hai) is used to ask 'What is your name?' in English."
+                },
+                {
+                    question: "What does 'ख़ुश रहो' (Khush raho) mean in Hindi?",
+                    emoji: "&#x1F44D;",
+                    options: {
+                        a: "Goodbye",
+                        b: "Thank you",
+                        c: "Be happy",
+                        d: "I love you"
+                    },
+                    answer: "c",
+                    explanation: "The Hindi phrase 'ख़ुश रहो' (Khush raho) means 'Be happy' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'I'm sorry'?",
+                    emoji: "&#x1F64B;",
+                    options: {
+                        a: "कृपया (Kripya)",
+                        b: "माफ़ कीजिए (Maaf kijiye)",
+                        c: "मैं ठीक हूँ (Main theek hoon)",
+                        d: "धन्यवाद (Dhanyavaad)"
+                    },
+                    answer: "b",
+                    explanation: "The Hindi phrase 'माफ़ कीजिए' (Maaf kijiye) means 'I'm sorry' in English."
+                },
+                {
+                    question: "What is the Hindi word for 'Thank you very much'?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "बहुत धन्यवाद (Bahut dhanyavaad)",
+                        b: "माफ़ कीजिए (Maaf kijiye)",
+                        c: "तुम मेरे लिए क्या कर सकते हो? (Tum mere liye kya kar sakte ho?)",
+                        d: "मैं अच्छा हूं (Main accha hoon)"
+                    },
+                    answer: "a",
+                    explanation: "The Hindi phrase 'बहुत धन्यवाद' (Bahut dhanyavaad) means 'Thank you very much' in English."
+                },
+                {
+                    question: "What does 'आपका स्वागत है' (Aapka swagat hai) mean in Hindi?",
+                    emoji: "&#x1F64F;",
+                    options: {
+                        a: "Please",
+                        b: "Hello",
+                        c: "Thank you",
+                        d: "Welcome"
+                    },
+                    answer: "d",
+                    explanation: "The Hindi phrase 'आपका स्वागत है' (Aapka swagat hai) translates to 'Welcome' in English."
+                }
+            ]
+        }
+    ];
         let currentLevel = 1;
         let currentQuestion = 0;
         let score = 0;
