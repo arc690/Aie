@@ -123,35 +123,24 @@
             z-index: 9999;
             opacity: 1;
             transition: opacity 0.5s ease-in-out;
-          }
-          
-          .logo {
+        }
+
+        .logo {
             max-width: 200px;
             max-height: 200px;
-          }
-          
-          .intro-section.hide {
+        }
+
+        .intro-section.hide {
             opacity: 0;
             pointer-events: none;
-          }
+        }
     </style>
 </head>
 
 <body>
     <div class="intro-section">
         <img src="your-logo.png" alt="Logo" class="logo">
-      </div>
-      <Script>
-        // Function to hide the intro section after a certain duration
-    function hideIntroSection() {
-      const introSection = document.querySelector('.intro-section');
-      introSection.classList.add('hide');
-    }
-    
-    // Hide the intro section after 5 seconds (5000 milliseconds)
-    setTimeout(hideIntroSection, 5000);
-    
-      </Script>
+    </div>
     <div class="container">
         <h1>Hindi Language Quiz</h1>
         <div class="question">
@@ -164,6 +153,7 @@
             <button onclick="checkAnswer('c')">शुभ प्रभात (Shubh prabhat)</button>
             <button onclick="checkAnswer('d')">हाय (Hay)</button>
         </div>
+        <p id="explanationText"></p>
         <p id="scoreText" class="score"></p>
     </div>
 
@@ -183,7 +173,8 @@
                             c: "शुभ प्रभात (Shubh prabhat)",
                             d: "हाय (Hay)"
                         },
-                        answer: "a"
+                        answer: "a",
+                        explanation: "The Hindi word 'नमस्ते' (Namaste) is used to say 'Hello' or 'Greetings' in English."
                     },
                     {
                         question: "What does 'धन्यवाद' (Dhanyavaad) mean in Hindi?",
@@ -194,7 +185,8 @@
                             c: "Sorry",
                             d: "How are you"
                         },
-                        answer: "b"
+                        answer: "b",
+                        explanation: "The Hindi word 'धन्यवाद' (Dhanyavaad) translates to 'Thank you' in English."
                     },
                     {
                         question: "What is the Hindi word for 'Yes'?",
@@ -205,7 +197,8 @@
                             c: "बहुत अच्छा (Bahut accha)",
                             d: "हां (Haan)"
                         },
-                        answer: "d"
+                        answer: "d",
+                        explanation: "The Hindi word 'हां' (Haan) means 'Yes' in English."
                     },
                     {
                         question: "What is the Hindi word for 'Goodbye'?",
@@ -216,7 +209,8 @@
                             c: "धन्यवाद (Dhanyavaad)",
                             d: "आपका स्वागत है (Aapka swagat hai)"
                         },
-                        answer: "b"
+                        answer: "b",
+                        explanation: "The Hindi word 'आलविदा' (Alvida) is used to say 'Goodbye' in English."
                     },
                     {
                         question: "What does 'माफ़ कीजिए' (Maaf kijiye) mean in Hindi?",
@@ -227,7 +221,44 @@
                             c: "Goodbye",
                             d: "How are you"
                         },
-                        answer: "a"
+                        answer: "a",
+                        explanation: "The Hindi phrase 'माफ़ कीजिए' (Maaf kijiye) translates to 'Sorry' in English."
+                    },
+                    {
+                        question: "What is the Hindi word for 'Water'?",
+                        emoji: "&#x1F30A;",
+                        options: {
+                            a: "पानी (Paani)",
+                            b: "आग (Aag)",
+                            c: "बारिश (Barish)",
+                            d: "खाना (Khana)"
+                        },
+                        answer: "a",
+                        explanation: "The Hindi word 'पानी' (Paani) means 'Water' in English."
+                    },
+                    {
+                        question: "What is the Hindi word for 'My name is'?",
+                        emoji: "&#x1F4AC;",
+                        options: {
+                            a: "तुम्हारा नाम क्या है (Tumhara naam kya hai)",
+                            b: "मेरा नाम है (Mera naam hai)",
+                            c: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)",
+                            d: "मैं ठीक हूँ (Main theek hoon)"
+                        },
+                        answer: "b",
+                        explanation: "The Hindi phrase 'मेरा नाम है' (Mera naam hai) is used to say 'My name is' in English."
+                    },
+                    {
+                        question: "What does 'बहुत धन्यवाद' (Bahut dhanyavaad) mean in Hindi?",
+                        emoji: "&#x1F64F;",
+                        options: {
+                            a: "Very good",
+                            b: "Thank you very much",
+                            c: "Excuse me",
+                            d: "I don't understand"
+                        },
+                        answer: "b",
+                        explanation: "The Hindi phrase 'बहुत धन्यवाद' (Bahut dhanyavaad) means 'Thank you very much' in English."
                     }
                 ]
             },
@@ -243,7 +274,8 @@
                             c: "तुम मेरे लिए क्या कर सकते हो? (Tum mere liye kya kar sakte ho?)",
                             d: "मैं अच्छा हूं (Main accha hoon)"
                         },
-                        answer: "a"
+                        answer: "a",
+                        explanation: "The Hindi phrase 'मुझे तुमसे प्यार है' (Mujhe tumse pyar hai) means 'I love you' in English."
                     },
                     {
                         question: "What does 'खाना' (Khana) mean in Hindi?",
@@ -254,7 +286,8 @@
                             c: "Food",
                             d: "Walk"
                         },
-                        answer: "c"
+                        answer: "c",
+                        explanation: "The Hindi word 'खाना' (Khana) translates to 'Food' in English."
                     },
                     {
                         question: "What is the Hindi word for 'Thank you'?",
@@ -265,7 +298,8 @@
                             c: "नमस्ते (Namaste)",
                             d: "धन्यवाद (Dhanyavaad)"
                         },
-                        answer: "d"
+                        answer: "d",
+                        explanation: "The Hindi phrase 'धन्यवाद' (Dhanyavaad) is used to say 'Thank you' in English."
                     },
                     {
                         question: "What is the Hindi word for 'Good morning'?",
@@ -276,7 +310,8 @@
                             c: "नमस्ते (Namaste)",
                             d: "बधाई हो (Badhai ho)"
                         },
-                        answer: "b"
+                        answer: "b",
+                        explanation: "The Hindi phrase 'सुप्रभात' (Suprabhat) is used to greet 'Good morning' in English."
                     },
                     {
                         question: "What does 'कृपया' (Kripya) mean in Hindi?",
@@ -287,7 +322,8 @@
                             c: "Thank you",
                             d: "Sorry"
                         },
-                        answer: "a"
+                        answer: "a",
+                        explanation: "The Hindi word 'कृपया' (Kripya) translates to 'Please' in English."
                     }
                 ]
             },
@@ -303,244 +339,158 @@
                             c: "मेरा नाम क्या है (Mera naam kya hai)",
                             d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
                         },
-                        answer: "a"
+                        answer: "a",
+                        explanation: "The Hindi phrase 'आप कैसे हैं' (Aap kaise hain) is used to ask 'How are you?' in English."
                     },
                     {
-                        question: "What does 'शुभ रात्रि' (Shubh ratri) mean in Hindi?",
-                        emoji: "&#x1F31B;",
-                        options: {
-                            a: "Good morning",
-                            b: "Good evening",
-                            c: "Good night",
-                            d: "Goodbye"
-                        },
-                        answer: "c"
-                    },
-                    {
-                        question: "What is the Hindi word for 'Water'?",
-                        emoji: "&#x1F30A;",
-                        options: {
-                            a: "पानी (Paani)",
-                            b: "आग (Aag)",
-                            c: "बारिश (Barish)",
-                            d: "खाना (Khana)"
-                        },
-                        answer: "a"
-                    },
-                    {
-                        question: "What is the Hindi word for 'My name is'?",
-                        emoji: "&#x1F4AC;",
-                        options: {
-                            a: "तुम्हारा नाम क्या है (Tumhara naam kya hai)",
-                            b: "मेरा नाम है (Mera naam hai)",
-                            c: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)",
-                            d: "मैं ठीक हूँ (Main theek hoon)"
-                        },
-                        answer: "b"
-                    },
-                    {
-                        question: "What does 'बहुत धन्यवाद' (Bahut dhanyavaad) mean in Hindi?",
-                        emoji: "&#x1F64F;",
+                        question: "What does 'बहुत अच्छा' (Bahut accha) mean in Hindi?",
+                        emoji: "&#x1F44D;",
                         options: {
                             a: "Very good",
-                            b: "Thank you very much",
+                            b: "Thank you",
                             c: "Excuse me",
                             d: "I don't understand"
                         },
-                        answer: "b"
-                    }
-                ]
-            },
-            {
-                level: 4,
-                questions: [
-                    {
-                        question: "What is the Hindi word for 'Today'?",
-                        emoji: "&#x1F4C5;",
-                        options: {
-                            a: "आज (Aaj)",
-                            b: "कल (Kal)",
-                            c: "परसो (Parso)",
-                            d: "बुधवार (Budhwar)"
-                        },
-                        answer: "a"
+                        answer: "a",
+                        explanation: "The Hindi phrase 'बहुत अच्छा' (Bahut accha) means 'Very good' in English."
                     },
                     {
-                        question: "What does 'सब्ज़ी' (Sabzi) mean in Hindi?",
-                        emoji: "&#x1F331;",
-                        options: {
-                            a: "Fruit",
-                            b: "Vegetable",
-                            c: "Rice",
-                            d: "Meat"
-                        },
-                        answer: "b"
-                    },
-                    {
-                        question: "What is the Hindi word for 'Thank you very much'?",
+                        question: "What is the Hindi word for 'Sorry'?",
                         emoji: "&#x1F64F;",
                         options: {
-                            a: "बहुत धन्यवाद (Bahut dhanyavaad)",
-                            b: "कृपया (Kripya)",
+                            a: "कृपया (Kripya)",
+                            b: "आपका स्वागत है (Aapka swagat hai)",
                             c: "नमस्ते (Namaste)",
                             d: "माफ़ कीजिए (Maaf kijiye)"
                         },
-                        answer: "a"
+                        answer: "d",
+                        explanation: "The Hindi word 'माफ़ कीजिए' (Maaf kijiye) is used to say 'Sorry' in English."
                     },
                     {
-                        question: "What is the Hindi word for 'Good evening'?",
-                        emoji: "&#x1F307;",
+                        question: "What is the Hindi word for 'No'?",
+                        emoji: "&#x274C;",
                         options: {
-                            a: "शुभ संध्या (Shubh sandhya)",
-                            b: "सुप्रभात (Suprabhat)",
-                            c: "नमस्ते (Namaste)",
-                            d: "बधाई हो (Badhai ho)"
+                            a: "हां (Haan)",
+                            b: "नहीं (Nahin)",
+                            c: "आपका स्वागत है (Aapka swagat hai)",
+                            d: "बहुत अच्छा (Bahut accha)"
                         },
-                        answer: "a"
+                        answer: "b",
+                        explanation: "The Hindi word 'नहीं' (Nahin) means 'No' in English."
                     },
                     {
-                        question: "What does 'माफ़ी चाहता हूँ' (Maafi chahta hoon) mean in Hindi?",
-                        emoji: "&#x1F64F;",
+                        question: "What does 'मेरा नाम है' (Mera naam hai) mean in Hindi?",
+                        emoji: "&#x1F4AC;",
                         options: {
-                            a: "I'm sorry",
-                            b: "Thank you",
-                            c: "Goodbye",
-                            d: "I love you"
+                            a: "What is your name?",
+                            b: "My name is",
+                            c: "Nice to meet you",
+                            d: "I am fine"
                         },
-                        answer: "a"
-                    }
-                ]
-            },
-            {
-                level: 5,
-                questions: [
+                        answer: "b",
+                        explanation: "The Hindi phrase 'मेरा नाम है' (Mera naam hai) is used to say 'My name is' in English."
+                    },
+                    {
+                        question: "What is the Hindi word for 'How old are you'?",
+                        emoji: "&#x1F64B;",
+                        options: {
+                            a: "तुम्हारी उम्र क्या है (Tumhari umr kya hai)",
+                            b: "मैं ठीक हूँ (Main theek hoon)",
+                            c: "मेरा नाम क्या है (Mera naam kya hai)",
+                            d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
+                        },
+                        answer: "a",
+                        explanation: "The Hindi phrase 'तुम्हारी उम्र क्या है' (Tumhari umr kya hai) is used to ask 'How old are you?' in English."
+                    },
                     {
                         question: "What is the Hindi word for 'Where is the bathroom'?",
                         emoji: "&#x1F6BD;",
                         options: {
-                            a: "कमरा कहाँ है (Kamra kahan hai)",
-                            b: "बाथरूम कहाँ है (Bathroom kahan hai)",
-                            c: "खाना कहाँ मिलेगा (Khana kahan milega)",
-                            d: "मैं ठीक हूँ (Main theek hoon)"
+                            a: "बाथरूम कहाँ है (Bathroom kahan hai)",
+                            b: "मैं ठीक हूँ (Main theek hoon)",
+                            c: "मेरा नाम क्या है (Mera naam kya hai)",
+                            d: "आपसे मिलकर ख़ुशी हुई (Aapse milkar khushi hui)"
                         },
-                        answer: "b"
+                        answer: "a",
+                        explanation: "The Hindi phrase 'बाथरूम कहाँ है' (Bathroom kahan hai) is used to ask 'Where is the bathroom?' in English."
                     },
                     {
-                        question: "What does 'बहुत ख़ूबसूरत' (Bahut khoobsurat) mean in Hindi?",
-                        emoji: "&#x1F60D;",
-                        options: {
-                            a: "Good morning",
-                            b: "Beautiful",
-                            c: "Good night",
-                            d: "Goodbye"
-                        },
-                        answer: "b"
-                    },
-                    {
-                        question: "What is the Hindi word for 'Friend'?",
-                        emoji: "&#x1F465;",
-                        options: {
-                            a: "मित्र (Mitr)",
-                            b: "दोस्त (Dost)",
-                            c: "सहेली (Saheli)",
-                            d: "प्रेमी (Premi)"
-                        },
-                        answer: "b"
-                    },
-                    {
-                        question: "What is the Hindi word for 'Good afternoon'?",
-                        emoji: "&#x1F31E;",
-                        options: {
-                            a: "शुभ दोपहर (Shubh dopahar)",
-                            b: "सुप्रभात (Suprabhat)",
-                            c: "नमस्ते (Namaste)",
-                            d: "बधाई हो (Badhai ho)"
-                        },
-                        answer: "a"
-                    },
-                    {
-                        question: "What does 'मुझे समझ नहीं आ रहा है' (Mujhe samajh nahi aa raha hai) mean in Hindi?",
+                        question: "What does 'धन्य होना' (Dhany hona) mean in Hindi?",
                         emoji: "&#x1F64F;",
                         options: {
-                            a: "I understand",
-                            b: "Thank you",
-                            c: "I don't understand",
-                            d: "Excuse me"
+                            a: "Thank you",
+                            b: "Excuse me",
+                            c: "Goodbye",
+                            d: "Congratulations"
                         },
-                        answer: "c"
+                        answer: "d",
+                        explanation: "The Hindi phrase 'धन्य होना' (Dhany hona) translates to 'Congratulations' in English."
                     }
                 ]
             }
         ];
 
-        let currentLevelIndex = 0;
-        let currentQuestionIndex = 0;
+        let currentLevel = 1;
+        let currentQuestion = 0;
         let score = 0;
 
-        function displayQuestion() {
-            const currentLevel = levels[currentLevelIndex];
-            const currentQuestion = currentLevel.questions[currentQuestionIndex];
+        const container = document.querySelector(".container");
+        const questionText = document.querySelector("#questionText");
+        const emoji = document.querySelector(".emoji");
+        const options = document.querySelector(".options");
+        const explanationText = document.querySelector("#explanationText");
+        const scoreText = document.querySelector("#scoreText");
 
-            const questionText = document.getElementById("questionText");
-            questionText.innerHTML = currentQuestion.question;
+        function startQuiz() {
+            const introSection = document.querySelector(".intro-section");
+            introSection.classList.add("hide");
+            showQuestion();
+        }
 
-            const emoji = document.querySelector(".emoji");
-            emoji.innerHTML = currentQuestion.emoji;
+        function showQuestion() {
+            const currentQuestionData = levels[currentLevel - 1].questions[currentQuestion];
+            questionText.textContent = currentQuestionData.question;
+            emoji.innerHTML = currentQuestionData.emoji;
+            options.innerHTML = "";
+            explanationText.textContent = "";
+            scoreText.textContent = "";
 
-            const optionsContainer = document.querySelector(".options");
-            optionsContainer.innerHTML = "";
-
-            for (const option in currentQuestion.options) {
+            for (const option in currentQuestionData.options) {
                 const button = document.createElement("button");
-                button.textContent = currentQuestion.options[option];
+                button.textContent = currentQuestionData.options[option];
                 button.setAttribute("onclick", `checkAnswer('${option}')`);
-                optionsContainer.appendChild(button);
+                options.appendChild(button);
             }
         }
 
-        function checkAnswer(selectedOption) {
-            const currentLevel = levels[currentLevelIndex];
-            const currentQuestion = currentLevel.questions[currentQuestionIndex];
-
-            if (selectedOption === currentQuestion.answer) {
+        function checkAnswer(answer) {
+            const currentQuestionData = levels[currentLevel - 1].questions[currentQuestion];
+            const explanation = currentQuestionData.explanation;
+            if (answer === currentQuestionData.answer) {
                 score++;
+                explanationText.textContent = "Correct! " + explanation;
+            } else {
+                explanationText.textContent = "Incorrect! " + explanation;
             }
 
-            if (currentQuestionIndex < currentLevel.questions.length - 1) {
-                currentQuestionIndex++;
-                displayQuestion();
+            currentQuestion++;
+
+            if (currentQuestion < levels[currentLevel - 1].questions.length) {
+                showQuestion();
             } else {
-                if (currentLevelIndex < levels.length - 1) {
-                    const continueLearning = confirm("Congratulations! You completed Level " + currentLevel.level + ". Do you want to continue learning Hindi?");
-                    if (continueLearning) {
-                        currentQuestionIndex = 0;
-                        currentLevelIndex++;
-                        displayQuestion();
-                    } else {
-                        showScore();
-                    }
-                } else {
-                    showScore();
-                }
+                showScore();
             }
         }
 
         function showScore() {
-            const container = document.querySelector(".container");
-            const scoreText = document.getElementById("scoreText");
-            scoreText.textContent = "Quiz Completed!\nYour score: " + score + " out of " + getTotalQuestionsCount();
-            scoreText.style.display = "block";
+            questionText.textContent = "Quiz completed!";
+            emoji.innerHTML = "&#x1F389;";
+            options.innerHTML = "";
+            explanationText.textContent = "";
+            scoreText.textContent = "Your score: " + score + " out of " + levels[currentLevel - 1].questions.length;
         }
 
-        function getTotalQuestionsCount() {
-            let totalQuestionsCount = 0;
-            for (const level of levels) {
-                totalQuestionsCount += level.questions.length;
-            }
-            return totalQuestionsCount;
-        }
-
-        displayQuestion();
+        startQuiz();
     </script>
 </body>
 
